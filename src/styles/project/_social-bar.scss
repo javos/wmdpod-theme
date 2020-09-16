@@ -1,0 +1,49 @@
+.vd-social-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	@media(max-width: $breakpoint-small-max) {
+		flex-direction: column;
+	}
+	padding: 12px 25px;
+	border: 3px solid rgba(black,0.1);
+	border-radius: 15px;
+	
+	li {
+		list-style-type: none;
+	}
+	
+
+	.vd-icon-link {
+		&__label {
+			dt {
+				font-size: 1.1em;
+				color: black;
+			}
+			dd {
+				color: rgba(black,0.5);
+				text-decoration: underline;
+			}
+		}
+
+		&:hover .vd-icon-link__label {
+			text-decoration: none;
+		}
+
+		&:hover .vd-icon-link__label dd {
+			text-decoration: underline;
+		}
+		
+		&__icon {
+			font-size: 64px;
+			
+			.vd-icon {
+				background-clip: text;
+				color: transparent;
+			}
+
+			.vd-icon:before {
+			}
+		}
+	}
+}

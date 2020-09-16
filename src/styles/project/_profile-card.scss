@@ -1,0 +1,124 @@
+.vd-profile-card {
+	background: white;
+	box-shadow: rgba(#C8BEB2,0.5) 0 4px 50px;
+	border-radius: 15px;
+
+	+ .vd-profile-card {
+		margin-top: 1em;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		padding: 16px;
+
+		@media(max-width: 750px) {
+			flex-direction: column;
+		}
+	}
+
+		&__pic {
+			flex-grow: 0;
+			flex-shrink: 0;
+			margin-right: 16px;
+			max-width: 30%;
+
+			@media(max-width: 750px) {
+				margin-bottom: 1em;
+			}
+
+			@media(max-width: $breakpoint-small-max) {
+				margin: 0 auto 1em;
+				max-width: 50%;
+			}
+			
+			img {
+				// height: 100%;
+				width: auto;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+
+		&__text {
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+
+			&__title {
+				font-size: 20px;
+				font-weight: bold;
+				color: black;
+			}
+			&__subtitle {
+				font-size: 17px;
+				font-weight: bold;
+				color: pre-color(primary);
+			}
+
+			&__bio {
+				margin-top: 1em;
+				font-size: 15px;
+			}
+
+
+	&__links {
+		flex-grow: 1;
+		flex-shrink: 1;
+		border-top: 1px solid rgba(black,0.05);
+		list-style-type: none;
+		margin: 0;
+		padding: 13px 16px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		li {
+			margin-right: 1em;
+		}
+
+		.vd-icon-link__label {
+			text-decoration: underline;
+		}
+
+		.vd-icon-link {
+			&__icon {
+				font-size: 20px;
+				color: pre-color(primary);
+			}
+			&__label {
+				font-family: "Overpass";
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.vd-shadow-pic {
+	position: relative;
+
+	&__pic {
+		width: 100%;
+		position: relative;
+		z-index: 4;
+		opacity: 1;
+	}
+	&__shadow {
+		position: absolute;
+		z-index: 3;
+		top: 6%;
+		left: -2%;
+		right: -2%;
+		bottom: -8%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		filter: blur(36px);
+		opacity: 0.4;
+	}
+}
+
+.vd-img {
+	border-radius: 8px;
+	overflow: hidden;
+}

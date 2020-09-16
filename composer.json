@@ -1,0 +1,14 @@
+{
+    "name": "wmdpod-theme-vondan",
+    "type": "project",
+    "license": "UNLICENSED",
+    "authors": [
+		  {
+            "name": "Janis von Seggern",
+            "email": "janis@vondan.de"
+        }
+    ],
+    "require": {
+        "tgmpa/tgm-plugin-activation": "^2.6"
+    }
+}

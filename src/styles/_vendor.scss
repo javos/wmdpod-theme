@@ -1,0 +1,22 @@
+// UIkit Shims
+@import 'prefect-lib/src/styles/vendor/uikit-overwrites';
+
+// UIkit
+@import 'uikit/src/scss/variables';
+@import 'uikit/src/scss/mixins';
+@import 'uikit/src/scss/uikit';
+
+// Themify
+@import "ti-icons/css/themify-icons";
+
+// Font Awesome
+$fa-font-path: '../fonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+

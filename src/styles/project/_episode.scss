@@ -1,0 +1,147 @@
+$vd-episode-footer-padding-x: 25px !default;
+$vd-episode-footer-padding-y: 18px !default;
+$vd-episode-footer-offset: 30px !default;
+
+.vd-episode {
+	// max-width: 980px;
+	// margin-left: auto;
+	// margin-right: auto;
+
+	&__inner {
+		@extend .vd-card;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__header {
+		img { border-radius: 25px 25px 0 0; }
+	}
+
+	&__title {
+		margin-bottom: 1em;
+
+		.vd-title {
+			font-size: 19px;
+			
+			.vd-subtitle { font-size: 1rem; }
+		}
+	}
+	&__padded {
+		padding: 2em;
+
+		@media(min-width: $breakpoint-large) {
+			padding: 45px 90px;
+		}
+	}
+
+	&__info {
+		font-size: 15px;
+
+		@media(max-width:$breakpoint-small-max) {
+			margin-top: 1em;
+		}
+	}
+
+		&__badge {
+			height: 36px;
+			border-radius: 100px;
+			padding: 6px 18px;
+			// font-size: 1.2em;
+			font-weight: 700;
+			color: #fff;
+			background: pre-color(primary);
+			
+			@extend .vd-card;
+		}
+
+		&__number {
+			display: flex;
+			align-items: center;
+		}
+	
+	&__player {
+		padding: 25px;
+		padding-top: 0;
+
+		.player {
+			border-radius: 15px;
+			overflow: hidden;
+		}
+	}
+
+	&__footer {
+		@extend .vd-card;
+		position: relative;
+		z-index: 1;
+		padding: ($vd-episode-footer-padding-y + $vd-episode-footer-offset) $vd-episode-footer-padding-x $vd-episode-footer-padding-y;
+		margin: -$vd-episode-footer-offset 90px 0;
+		border-radius: 15px;
+		font-size: 15px;
+
+		@media(max-width:$breakpoint-small-max) {
+			margin-left: 30px;
+			margin-right: 30px;
+			padding: (15px + $vd-episode-footer-offset) 15px 15px;
+		}
+	}
+
+	&__excerpt {
+		max-height: 12em;
+		overflow: hidden;
+		mask-image: linear-gradient(to top, transparent 15%, black 85%);
+	}
+}
+
+.vd-episode + .vd-episode {
+	margin-top: 90px;
+}
+
+.vd-contributors {
+	margin-top: 1em;
+}
+
+.vd-contributor {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 6px 7px;
+	border-radius: 8px;
+	margin-bottom: 0.5em;
+
+	&__pic {
+		@include pre-flex-fixed;
+		width: 75px;
+		margin-right: 12px;
+
+		.vd-shadow-pic__shadow {
+			opacity: 0.5;
+			filter: blur(35px);
+		}
+	}
+	&__info {
+		@include pre-flex-fluid;
+		line-height: 1.2;
+	}
+		&__name {
+			font-weight: 700;
+		}
+
+		&__comment {
+			font-size: 15px;
+			color: rgba(black,0.5);
+		}
+
+	&__links {
+		@include pre-flex-fixed;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		li {
+			&:not(:first-child) {
+				margin-left: 0.5em;
+				font-size: 17px;
+			}
+		}
+	}
+}

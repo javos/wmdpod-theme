@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'jvd-icons';
+  src:  url('fonts/jvd-icons.eot?u1y03u');
+  src:  url('fonts/jvd-icons.eot?u1y03u#iefix') format('embedded-opentype'),
+    url('fonts/jvd-icons.ttf?u1y03u') format('truetype'),
+    url('fonts/jvd-icons.woff?u1y03u') format('woff'),
+    url('fonts/jvd-icons.svg?u1y03u#jvd-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="jvd-icon-"], [class*=" jvd-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'jvd-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jvd-icon-pause:before {
+  content: "\e901";
+}
+.jvd-icon-play:before {
+  content: "\e902";
+}
+.jvd-icon-skip-backward:before {
+  content: "\e903";
+}
+.jvd-icon-skip-forward:before {
+  content: "\e904";
+}
+.jvd-icon-external-link:before {
+  content: "\e900";
+}

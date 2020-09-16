@@ -1,0 +1,24 @@
+@mixin pre-all-directions($value) {
+	top: $value;
+	bottom: $value;
+	left: $value;
+	right: $value;
+}
+
+// Background
+.pre-background-repeat			{ background-repeat: repeat; }
+.pre-background-repeat-y		{ background-repeat: repeat-y; }
+.pre-background-repeat-x		{ background-repeat: repeat-x; }
+.pre-background-no-repeat		{ background-repeat: no-repeat; }
+
+.pre-background-size-contain	{ background-size: contain; }
+.pre-background-size-cover		{ background-size: cover; }
+
+.pre-background-position-center	{
+	background-position-y: center;
+	background-position-x: center;
+}
+.pre-background-position-left	{ background-position-x: left; }
+.pre-background-position-right	{ background-position-x: right; }
+.pre-background-position-top	{ background-position-y: top; }
+.pre-background-position-bottom	{ background-position-y: bottom; }

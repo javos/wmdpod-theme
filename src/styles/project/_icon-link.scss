@@ -1,0 +1,21 @@
+.vd-icon-link {
+	&, &:hover { text-decoration: none; }
+
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__icon {
+		margin-right: 0.3em;
+	}
+
+	&__label {
+
+	}
+
+	&:hover {
+		.vd-icon-link__label {
+			text-decoration: underline;
+		}
+	}
+}

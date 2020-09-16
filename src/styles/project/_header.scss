@@ -1,0 +1,36 @@
+#header {
+	margin-top: 0;
+	padding-top: 100px;
+	// background: url('../images/header.jpg') repeat-x center top;
+	// background-size: 100%;
+
+	@media(max-width:$breakpoint-small-max) {
+		padding-top: 36px;
+	}
+	
+}
+
+.vd-logo {
+	transition: 0.5s transform ease;
+	max-width: 80%;
+	margin: auto;
+	margin-bottom: 50px;
+
+	@media(min-width:$breakpoint-small) {
+		max-width: 50%;
+	}
+
+	@media(min-width:$breakpoint-medium) {
+		max-width: 360px;
+	}
+}
+.vd-logo .vd-shadow-pic__shadow {
+	transition: 2s filter ease;
+}
+.vd-logo:hover {
+	transform: scale(1.02);
+	.vd-shadow-pic__shadow {
+		opacity: 0.5;
+		filter: blur(50px);
+	}
+}

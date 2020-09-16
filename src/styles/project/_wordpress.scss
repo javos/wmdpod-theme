@@ -1,0 +1,44 @@
+.wp-caption {
+	margin: 2rem 0;
+
+	.wp-caption-text {
+		margin-top: 0.5rem;
+		font-size: 0.9rem;
+		opacity: 0.5;
+	}
+}
+
+
+.admin-bar .uk-sticky.uk-active {
+	margin-top: 24px !important;
+}
+
+.admin-bar .uk-sticky.uk-active {
+	@media(max-width:782px) {
+		margin-top: 46px !important;
+	}
+
+	@media(max-width:600px) {
+		margin-top: 0 !important;
+	}
+}
+
+.admin-bar .mobile-nav {
+	top: 24px !important;
+	height: calc(100vh - 24px) !important;
+
+	@media(max-width:782px) {
+		top: 46px !important;
+		height: calc(100vh - 46px) !important;
+	}
+
+	// @media(max-width:600px) {
+	// 	top: 0 !important;
+	// 	height: 100vh;
+	// }
+}
+
+
+.has-text-align-center { @extend .uk-text-center; }
+.has-text-align-left { @extend .uk-text-left; }
+.has-text-align-right { @extend .uk-text-right; }
