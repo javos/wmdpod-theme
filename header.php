@@ -57,30 +57,34 @@
 					</div>
 
 					
-					<div class="vd-subscribar__services">
-						<ul>
-							<?php foreach(get_field('services','option') as $service) : ?>
+					<?php if (get_field('services','option')) :?>
+						<?php $services = get_field('services','option'); ?>
+						
+						<div class="vd-subscribar__services">
+							<ul>
+								<?php foreach($services as $service) : ?>
 
-								<?php
-									$service_tooltip = '';
-									
-									if ($service['service_tooltip']) {
-										$service_tooltip = $service['service_tooltip'];
-									}
-									else {
-										$service_tooltip = 'Was meinst du? auf '.$service['service_name'];
-									}
-								?>
+									<?php
+										$service_tooltip = '';
+										
+										if ($service['service_tooltip']) {
+											$service_tooltip = $service['service_tooltip'];
+										}
+										else {
+											$service_tooltip = 'Was meinst du? auf '.$service['service_name'];
+										}
+									?>
 
-							<li>
-								<a title="<?= $service_tooltip ?>" href="<?= $service['url'] ?>" target="blank">
-									<span class="<?= $service['service_icon_class'] ?>"></span>
-								</a>
-							</li>
-							<?php endforeach; ?>
+								<li>
+									<a title="<?= $service_tooltip ?>" href="<?= $service['url'] ?>" target="blank">
+										<span class="<?= $service['service_icon_class'] ?>"></span>
+									</a>
+								</li>
+								<?php endforeach; ?>
 
-						</ul>
-					</div>
+							</ul>
+						</div>
+					<?php endif; ?>
 				</div>
 				
 			</div>
