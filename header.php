@@ -59,10 +59,17 @@
 					
 					<div class="vd-subscribar__services">
 						<ul>
-							<li><a title="Was meinst du? auf Spotify" href="https://open.spotify.com/show/5QcJPaDPm4To6HZs9RS0UX" target="blank"><span class="fab fa-spotify"></span></a></li>
-							<li><a href="https://podcasts.apple.com/de/podcast/was-meinst-du-der-alltagsfragenpodcast/id1515996447?l=en" target="blank" class="Was meinst du? auf Apple Podcasts"><span class="fab fa-apple"></span></a></li>
+							<?php foreach(get_field('services','option') as $service) : ?>
+							<li>
+								<a title="Was meinst du? auf <?= $service['service_name'] ?>" href="<?= $service['url'] ?>" target="blank">
+									<span class="<?= $service['service_icon_class'] ?>"></span>
+								</a>
+							</li>
+							<?php endforeach; ?>
+
+							<!-- <li><a href="https://podcasts.apple.com/de/podcast/was-meinst-du-der-alltagsfragenpodcast/id1515996447?l=en" target="blank" class="Was meinst du? auf Apple Podcasts"><span class="fab fa-apple"></span></a></li>
 							<li><a href="" target="blank" class="Was meinst du? auf Google Podcasts"><span class="fab fa-google"></span></a></li>
-							<li><a href="https://www.deezer.com/show/1308842?utm_source=deezer&utm_content=show-1308842&utm_term=3820704962_1596412814&utm_medium=web" target="blank" class="Was meinst du? auf Deezer"><span class="fab fa-deezer"></span></a></li>
+							<li><a href="https://www.deezer.com/show/1308842?utm_source=deezer&utm_content=show-1308842&utm_term=3820704962_1596412814&utm_medium=web" target="blank" class="Was meinst du? auf Deezer"><span class="fab fa-deezer"></span></a></li> -->
 						</ul>
 					</div>
 				</div>

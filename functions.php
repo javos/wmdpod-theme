@@ -1,4 +1,7 @@
+
 <?php
+
+require_once dirname(__FILE__) . '/acf.php';
 
 require_once dirname( __FILE__ ) . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php';
 add_action('tgmpa_register','pre_kickstart_register_required_plugins');
