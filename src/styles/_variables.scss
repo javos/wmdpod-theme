@@ -1,37 +1,21 @@
-// PROJECT
-$jvd-smaller-screens-threshold: 1281px;
-$jvd-transition-default: color 0.2s ease, background 0.2s ease;
+// CONTAINER
 
-
-// PREFECT
-
-$pre-horizontal-max: 2000px;
+$pre-horizontal-max: 1120px;
 $container-max-width: $pre-horizontal-max;
 
-$pre-font-default: 'Overpass';
-$pre-heading-font-family-h1: $pre-font-default;
-$pre-heading-font-family-h2: $pre-font-default;
-$pre-heading-font-family-h3: $pre-font-default;
-$pre-heading-font-family-h4: $pre-font-default;
-$pre-heading-font-family-h5: $pre-font-default;
-$pre-heading-font-family-h6: $pre-font-default;
 
+// FONTS
 
-$pre-colors: (
-	primary: #CB351E,
-	secondary: #ddd,
-	background: #F3F3F1,
-	text: rgba(0,0,0,0.75),
-	yellow: #FFC200,
-	white: white
-);
+$global-line-height: 1.55;
 
-$pre-link-color-default: map-get($pre-colors,text);
-$global-muted-background: #eee;
-$global-secondary-background: black;
+// Base Font Family
+$pre-font-primary: 'DM Sans';
+$pre-font-secondary: 'Zilla Slab';
+$pre-font-default: $pre-font-primary;
 
+// Base Font Size
 $pre-font-size-default: 17px;
-$pre-font-size-smaller-screens: 15px;
+$pre-font-size-smaller-screens: 17px;
 
 $pre-font-sizes-root: (
 	xs: $pre-font-size-default,
@@ -41,10 +25,18 @@ $pre-font-sizes-root: (
 	xl: $pre-font-size-default,
 );
 
-$pre-heading-font-size-h1: 56px;
-$pre-heading-font-size-h2: 42px;
-$pre-heading-font-size-h3: 32px;
-$pre-heading-font-size-h4: 28px;
+// Headings
+$pre-heading-font-family-h1: $pre-font-secondary;
+$pre-heading-font-family-h2: $pre-font-secondary;
+$pre-heading-font-family-h3: $pre-font-secondary;
+$pre-heading-font-family-h4: $pre-font-secondary;
+$pre-heading-font-family-h5: $pre-font-secondary;
+$pre-heading-font-family-h6: $pre-font-secondary;
+
+$pre-heading-font-size-h1: 70px;
+$pre-heading-font-size-h2: 32px;
+$pre-heading-font-size-h3: 28px;
+$pre-heading-font-size-h4: 24px;
 $pre-heading-font-size-h5: 1.3rem;
 $pre-heading-font-size-h6: 1.2rem;
 
@@ -54,6 +46,21 @@ $pre-heading-font-size-h3-small: 28px;
 $pre-heading-font-size-h4-small: 22px;
 $pre-heading-font-size-h5-small: 1.3rem;
 $pre-heading-font-size-h6-small: 1.2rem;
+
+
+// COLORS
+$pre-colors: (
+	primary: rgba(black,1),
+	secondary: rgba(black,0.7),
+	background: #fff,
+	text: rgba(0,0,0,0.75),
+	yellow: #FFC200,
+	white: white
+);
+
+$pre-link-color-default: map-get($pre-colors,text);
+$global-muted-background: #eee;
+$global-secondary-background: black;
 
 // UIKIT
 $global-font-family: $pre-font-default;
@@ -89,6 +96,9 @@ $lightbox-toolbar-icon-color: black;
 	--breakpoint-small-max: 767px;
 }
 
+$jvd-smaller-screens-threshold: 1281px;
+$jvd-transition-default: color 0.2s ease, background 0.2s ease;
 
-// EFFECTS
+
+// Effects
 $vd-shadows-card: rgba(#C8BEB2,0.5) 0 4px 50px;

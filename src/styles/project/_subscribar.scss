@@ -1,20 +1,75 @@
 .vd-subscribar {
-	ul {
-		font-size: 48px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 0 50px;
 
+	&__button {
+		margin-right: 60px;
+	}
 
-		a {
-			> *	{
-				transition: transform 0.5s ease;
+	&__services {
+		ul {
+			font-size: 48px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 0;
+
+			li:not(:last-child) {
+				margin-right: 1em;
+			}
+
+			li {
+				transition: transform 0.1s ease;
 				transform: scale(1);
+
+				&:hover {
+					color: pre-color(primary);
+					transform: scale(1.1);
+				}
 			}
-			&:hover > * {
-				color: pre-color(primary);
-				transform: scale(1.1);
-			}
+		}
+	}
+}
+
+.vd-subscribe-button {
+	border: 3px solid black;
+	padding: 0.5em;
+	border-radius: 14px;
+	position: relative;
+	background: pre-color(primary);
+	color: #fff;
+	height: 90px;
+	min-width: 280px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 6px 70px rgba(black,0.3);
+
+	transition: transform 0.1s ease;
+	transform: scale(1);
+	&:hover {
+		transform: scale(1.1);
+	}
+		
+	.vd-icon-link__icon {
+		font-size: 48px;
+		margin-right: 24px;
+	}
+	
+	.vd-icon-link__label {
+		display: block;
+
+		.title {
+			display: block;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.subtitle {
+			display: block;
+			opacity: 0.5;
 		}
 	}
 }

@@ -1,21 +1,18 @@
 .vd-title {
 	font-weight: bold;
-	font-family: 'Lora', serif;
+	font-family: $pre-font-secondary, sans-serif;
 	margin-bottom: 1em;
-}
-
-.vd-subtitle {
-	font-family: "Overpass";
-	font-weight: 600;
-	display: block;
-	font-size: 0.68em;
 	color: pre-color(primary);
 }
 
-
-.vd-pagetitle {
-	text-align: center;
+.vd-subtitle {
+	font-family: $pre-font-default;
+	font-weight: 600;
+	display: block;
+	font-size: 0.68em;
+	color: pre-color(secondary);
 }
+
 
 .vd-title a {
 	text-decoration: none;

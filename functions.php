@@ -85,6 +85,11 @@ function pre_kickstart_after_setup_theme() {
 		'caption',
 	]);
 	add_theme_support( 'title-tag' );
+
+	 // Editor Styles
+	 add_theme_support( 'editor-styles' );
+	 add_editor_style( 'dist/styles/styles-editor.css' );
+	 add_theme_support( 'align-wide' );
 }
 
 
@@ -127,7 +132,7 @@ function pre_kickstart_init() {
 
 	// Beispiel: add_image_size( 'headpic', 1200, 700, false );
 	add_image_size( 'wmdpod_episode_header_pic', 980, 400, false );
-	add_image_size( 'wmdpod_profile_pic', 330, 330, false );
+	add_image_size( 'wmdpod_profile_pic', 330, 372, false );
 	add_image_size( 'vd_shadow_pic_max', 1200, false, false );
 
 

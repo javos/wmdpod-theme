@@ -4,12 +4,24 @@
 }
 
 
+h1,h2,h3,h4,h5,h6,
+.pre-h1,.pre-h2,.pre-h3,.pre-h4,.pre-h5,.pre-h6 {
+	font-weight: bold;
+}
+
 h1, .pre-h1 {font-size: $pre-heading-font-size-h1; }
 h2, .pre-h2 {font-size: $pre-heading-font-size-h2; }
 h3, .pre-h3 {font-size: $pre-heading-font-size-h3; }
 h4, .pre-h4 {font-size: $pre-heading-font-size-h4; }
 h5, .pre-h5 {font-size: $pre-heading-font-size-h5; }
 h6, .pre-h6 {font-size: $pre-heading-font-size-h6; }
+
+h1.pre-larger, .pre-h1.pre-larger {font-size: $pre-heading-font-size-h1 * 1.25; }
+h2.pre-larger, .pre-h2.pre-larger {font-size: $pre-heading-font-size-h2 * 1.25; }
+h3.pre-larger, .pre-h3.pre-larger {font-size: $pre-heading-font-size-h3 * 1.25; }
+h4.pre-larger, .pre-h4.pre-larger {font-size: $pre-heading-font-size-h4 * 1.25; }
+h5.pre-larger, .pre-h5.pre-larger {font-size: $pre-heading-font-size-h5 * 1.25; }
+h6.pre-larger, .pre-h6.pre-larger {font-size: $pre-heading-font-size-h6 * 1.25; }
 
 @media(max-width:$breakpoint-small-max) {
 	h1, .pre-h1 {font-size: $pre-heading-font-size-h1-small; }
@@ -18,4 +30,20 @@ h6, .pre-h6 {font-size: $pre-heading-font-size-h6; }
 	h4, .pre-h4 {font-size: $pre-heading-font-size-h4-small; }
 	h5, .pre-h5 {font-size: $pre-heading-font-size-h5-small; }
 	h6, .pre-h6 {font-size: $pre-heading-font-size-h6-small; }
+
+
+	h1.pre-larger, .pre-h1.pre-larger {font-size: $pre-heading-font-size-h1-small * 1.25; }
+	h2.pre-larger, .pre-h2.pre-larger {font-size: $pre-heading-font-size-h2-small * 1.25; }
+	h3.pre-larger, .pre-h3.pre-larger {font-size: $pre-heading-font-size-h3-small * 1.25; }
+	h4.pre-larger, .pre-h4.pre-larger {font-size: $pre-heading-font-size-h4-small * 1.25; }
+	h5.pre-larger, .pre-h5.pre-larger {font-size: $pre-heading-font-size-h5-small * 1.25; }
+	h6.pre-larger, .pre-h6.pre-larger {font-size: $pre-heading-font-size-h6-small * 1.25; }
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+	&.pre-highlight {
+		margin-bottom: 1em;
+	}
 }
