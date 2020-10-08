@@ -7,14 +7,14 @@
 
 	<div class="vd-episode__inner">
 	
-		<span class="vd-episode__badge"><?php printf( esc_html__( '%d', 'vd-wmdpod' ), $episode->number() ); ?></span>
+		<span class="vd-episode__badge vd-episode-badge"><?php printf( esc_html__( '%d', 'vd-wmdpod' ), $episode->number() ); ?></span>
 		
 		<div class="vd-episode__content">
 			<div class="vd-episode__title pre-flex-fluid">
 				<h3 class="vd-title">
 					<a href="<?php the_permalink(); ?>">
 						<?= $episode->title() ?>
-						<!-- <span class="vd-subtitle">Anfänge & Bedenken</span> -->
+						<span class="vd-subtitle"><?= $episode->subtitle() ?></span>
 					</a>
 				</h3>
 			</div>

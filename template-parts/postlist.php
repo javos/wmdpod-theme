@@ -49,10 +49,18 @@
 			
 			<ul>
 				<?php foreach($podcast->episodes() as $episode) : ?>
-					<li>
-						<?php $permalink = $episode->url(); ?>
-						<a href="<?= $permalink; ?>"><?= $episode->title(); ?></a>
-						<a href="<?= $permalink; ?>"><?= $episode->publicationDate(); ?></a>
+					<?php $permalink = $episode->url(); ?>
+
+					<li class="vd-episode-small">
+						<div class="vd-episode-badge vd-episode-badge--small">
+							<?php printf( esc_html__( '%d', 'vd-wmdpod' ), $episode->number() ); ?>
+						</div>
+
+						<div class="vd-episode-small__inner">
+							<div class="vd-episode-small__title"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->title(); ?></a></div>
+							<div class="vd-episode-small__subtitle"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->subtitle(); ?></a></div>
+							<div class="vd-episode-small__date"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->publicationDate(); ?></a></div>
+						</div>
 					</li>
 				<?php endforeach; ?>
 			</ul>
