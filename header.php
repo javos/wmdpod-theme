@@ -60,16 +60,25 @@
 					<div class="vd-subscribar__services">
 						<ul>
 							<?php foreach(get_field('services','option') as $service) : ?>
+
+								<?php
+									$service_tooltip = '';
+									
+									if ($service['service_tooltip']) {
+										$service_tooltip = $service['service_tooltip'];
+									}
+									else {
+										$service_tooltip = 'Was meinst du? auf '.$service['service_name'];
+									}
+								?>
+
 							<li>
-								<a title="Was meinst du? auf <?= $service['service_name'] ?>" href="<?= $service['url'] ?>" target="blank">
+								<a title="<?= $service_tooltip ?>" href="<?= $service['url'] ?>" target="blank">
 									<span class="<?= $service['service_icon_class'] ?>"></span>
 								</a>
 							</li>
 							<?php endforeach; ?>
 
-							<!-- <li><a href="https://podcasts.apple.com/de/podcast/was-meinst-du-der-alltagsfragenpodcast/id1515996447?l=en" target="blank" class="Was meinst du? auf Apple Podcasts"><span class="fab fa-apple"></span></a></li>
-							<li><a href="" target="blank" class="Was meinst du? auf Google Podcasts"><span class="fab fa-google"></span></a></li>
-							<li><a href="https://www.deezer.com/show/1308842?utm_source=deezer&utm_content=show-1308842&utm_term=3820704962_1596412814&utm_medium=web" target="blank" class="Was meinst du? auf Deezer"><span class="fab fa-deezer"></span></a></li> -->
 						</ul>
 					</div>
 				</div>
