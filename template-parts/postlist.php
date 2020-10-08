@@ -44,6 +44,18 @@
 
 		<div class="vd-sidebar">
 			<h2 class="pre-highlight pre-larger">Alle Folgen</h2>
+
+			<?php $podcast = \Podlove\get_podcast(); ?>
+			
+			<ul>
+				<?php foreach($podcast->episodes() as $episode) : ?>
+					<li>
+						<?php $permalink = $episode->url(); ?>
+						<a href="<?= $permalink; ?>"><?= $episode->title(); ?></a>
+						<a href="<?= $permalink; ?>"><?= $episode->publicationDate(); ?></a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
 	</div>
 			

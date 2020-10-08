@@ -14,7 +14,7 @@
 				<h3 class="vd-title">
 					<a href="<?php the_permalink(); ?>">
 						<?= $episode->title() ?>
-						<span class="vd-subtitle">Anfänge & Bedenken</span>
+						<!-- <span class="vd-subtitle">Anfänge & Bedenken</span> -->
 					</a>
 				</h3>
 			</div>

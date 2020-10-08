@@ -1,0 +1,28 @@
+.vd-footer-nav {
+    margin-top: 3em;
+    li {
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+
+    ul li a {
+        color: rgba(black,0.5);
+    }
+}
+
+.vd-nav-horizontal {
+	display: flex;
+	justify-content: center;
+
+	li:not(:first-child) {
+		margin-left: 2em;
+	}
+}
+
+.vondan-logo {
+    img {
+        display: block;
+        max-width: 200px;
+        margin: auto;
+    }
+}
