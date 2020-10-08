@@ -1,6 +1,8 @@
 .vd-profile-card {
+	position: relative;
+	z-index: 3;
 	background: white;
-	box-shadow: rgba(#C8BEB2,0.5) 0 4px 50px;
+	box-shadow: rgba(#000,0.5) 0 4px 50px;
 	border-radius: 15px;
 
 	+ .vd-profile-card {
