@@ -30,3 +30,17 @@ function eraseCookie(name) {
 }
 
 
+
+
+// Podlove Button Fake Click
+
+document.addEventListener('DOMContentLoaded',function() {
+    console.log('hello');
+    var iframe = document.querySelector('.podlove-subscribe-button-iframe');
+    console.log(iframe);
+    if (iframe) {
+        iframeDom = iframe.contentWindow.document;
+        console.log('got iframe',iframeDom);
+    }
+});
+

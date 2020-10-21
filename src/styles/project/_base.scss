@@ -230,23 +230,13 @@ ul {
 
 
 
-
-.vd-maincontent {
-	width: 70%;
-}
-.vd-sidebar {
-	width: 30%;
-}
-
-
-
 hr {
 	margin: 80px 0-($global-gutter);
 	border-color: rgba(black,0.1);
 
 	@media(min-width:$pre-horizontal-max) {
-		margin-left: calc((#{$pre-horizontal-max} - 100vw) / 2);
-		margin-right: calc((#{$pre-horizontal-max} - 100vw) / 2);
+		margin-left: c£alc( ( (#{$pre-horizontal-max} - 100vw) / 2) + 10px);
+		margin-right: calc( ( (#{$pre-horizontal-max} - 100vw) / 2) + 10px);
 		position: relative;
 	}
 
@@ -264,3 +254,7 @@ hr {
 }
 
 
+#main {
+	position: relative;
+	z-index: 2;
+}

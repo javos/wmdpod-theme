@@ -15,6 +15,6 @@
 		</nav>
 	</footer>
 
-	<?php wp_footer() ?>
+	<?= do_shortcode('[podlove-podcast-subscribe-button]'); ?>
 </body>
 </html>

@@ -39,55 +39,59 @@
 
 				</div>
 			</div>
-		</div>
+		
 		
 
-		<section id="subscribar" class="vd-section">
-			<div class="uk-container vd-text-wrapper">
+			<section id="subscribar" class="vd-section">
+				<div class="uk-container vd-text-wrapper">
 
-				<div class="vd-subscribar">
-					
-					<div class="vd-subscribar__button">
-						<button id="podlove-subscriberoni" class="vd-icon-link vd-subscribe-button">
-							<span class="vd-icon-link__icon fas fa-podcast"></span>
-							<span class="vd-icon-link__label">
-								<span class="title">Abonnieren</span>
-							</span>
-						</button>
-					</div>
-
-					
-					<?php if (get_field('services','option')) :?>
-						<?php $services = get_field('services','option'); ?>
+					<div class="vd-subscribar">
 						
-						<div class="vd-subscribar__services">
-							<ul>
-								<?php foreach($services as $service) : ?>
+						<div class="vd-subscribar__button">
+							<button id="podlove-subscriberoni" class="vd-icon-link vd-subscribe-button">
+								<!-- <span class="vd-icon-link__icon fas fa-podcast"></span>
+								<span class="vd-icon-link__label">
+									<span class="title">Abonnieren</span>
+								</span> -->
 
-									<?php
-										$service_tooltip = '';
-										
-										if ($service['service_tooltip']) {
-											$service_tooltip = $service['service_tooltip'];
-										}
-										else {
-											$service_tooltip = 'Was meinst du? auf '.$service['service_name'];
-										}
-									?>
-
-								<li>
-									<a title="<?= $service_tooltip ?>" href="<?= $service['url'] ?>" target="blank">
-										<span class="<?= $service['service_icon_class'] ?>"></span>
-									</a>
-								</li>
-								<?php endforeach; ?>
-
-							</ul>
+								<?= do_shortcode('[podlove-podcast-subscribe-button style="frameless" color="white" format="rectangle" language="de"]'); ?>
+							</button>
 						</div>
-					<?php endif; ?>
+
+						
+						<?php if (get_field('services','option')) :?>
+							<?php $services = get_field('services','option'); ?>
+							
+							<div class="vd-subscribar__services">
+								<ul>
+									<?php foreach($services as $service) : ?>
+
+										<?php
+											$service_tooltip = '';
+											
+											if ($service['service_tooltip']) {
+												$service_tooltip = $service['service_tooltip'];
+											}
+											else {
+												$service_tooltip = 'Was meinst du? auf '.$service['service_name'];
+											}
+										?>
+
+									<li>
+										<a title="<?= $service_tooltip ?>" href="<?= $service['url'] ?>" target="blank">
+											<span class="<?= $service['service_icon_class'] ?>"></span>
+										</a>
+									</li>
+									<?php endforeach; ?>
+
+								</ul>
+							</div>
+						<?php endif; ?>
+					</div>
+					
 				</div>
-				
-			</div>
-		</section>
+			</section>
+
+		</div>
 
 	</header>

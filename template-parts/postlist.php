@@ -11,7 +11,34 @@
 	</div>
 
 	<div uk-grid>
-		<div class="vd-maincontent">
+		<div class="vd-sidebar uk-flex-last@l uk-width-1-3@l uk-margin-xlarge-bottom">
+			<h2 class="pre-highlight pre-larger">Alle Folgen</h2>
+
+			<?php $podcast = \Podlove\get_podcast(); ?>
+			
+			<ul>
+				<?php foreach($podcast->episodes() as $episode) : ?>
+					<?php $permalink = $episode->url(); ?>
+
+					<li class="vd-episode-small">
+						<div class="vd-episode-badge vd-episode-badge--small">
+							<?php printf( esc_html__( '%d', 'vd-wmdpod' ), $episode->number() ); ?>
+						</div>
+
+						<?php $target = ""; ?>
+
+						<div class="vd-episode-small__inner">
+							<div class="vd-episode-small__title"><a href="<?= $permalink; ?>" target="<?= $target ?>"><?= $episode->title(); ?></a></div>
+							<div class="vd-episode-small__subtitle"><a href="<?= $permalink; ?>" target="<?= $target ?>"><?= $episode->subtitle(); ?></a></div>
+							<div class="vd-episode-small__date"><a href="<?= $permalink; ?>" target="<?= $target ?>"><?= $episode->publicationDate(); ?></a></div>
+						</div>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		
+		</div>
+
+		<div class="vd-maincontent uk-flex-first@l uk-width-2-3@l">
 			<h2 class="pre-highlight pre-larger">Neueste Folgen</h2>
 
 			<div class="uk-grid">
@@ -40,30 +67,6 @@
 					<?php // include locate_template( 'template-parts/pagination.php'  ); ?>
 				<?php endif; ?>				
 			</div>
-		</div>
-
-		<div class="vd-sidebar">
-			<h2 class="pre-highlight pre-larger">Alle Folgen</h2>
-
-			<?php $podcast = \Podlove\get_podcast(); ?>
-			
-			<ul>
-				<?php foreach($podcast->episodes() as $episode) : ?>
-					<?php $permalink = $episode->url(); ?>
-
-					<li class="vd-episode-small">
-						<div class="vd-episode-badge vd-episode-badge--small">
-							<?php printf( esc_html__( '%d', 'vd-wmdpod' ), $episode->number() ); ?>
-						</div>
-
-						<div class="vd-episode-small__inner">
-							<div class="vd-episode-small__title"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->title(); ?></a></div>
-							<div class="vd-episode-small__subtitle"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->subtitle(); ?></a></div>
-							<div class="vd-episode-small__date"><a href="<?= $permalink; ?>" target="_blank"><?= $episode->publicationDate(); ?></a></div>
-						</div>
-					</li>
-				<?php endforeach; ?>
-			</ul>
 		</div>
 	</div>
 			

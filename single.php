@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 	
 	<main id="main" class="uk-container pre-container">
+
+		<?php if (get_post_type() == 'podcast' || get_post_type() == 'post') : ?>
+			<div class="vd-backlink uk-margin-xlarge-bottom uk-text-center"><a href="<?= get_bloginfo('siteurl') ?>">Zurück zur Übersicht</a></div>
+		<?php endif; ?>
+
 		<?php if (have_posts()) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
