@@ -19,7 +19,7 @@
 				</h3>
 			</div>
 
-			<div class="vd-episode__date"><?= $episode->publicationDate() ?></div>
+			<div class="vd-episode__date"><?= $episode->publicationDate()->format('d.m.Y') ?></div>
 
 				
 
