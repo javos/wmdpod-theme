@@ -13,13 +13,15 @@ Wordpress:
 - TGM Plugin Activation (http://tgmpluginactivation.com)
 - Podlove Podcast Publisher (https://publisher.podlove.org)
 
+(WordPress-Dependencies werden im Projekt mit Composer und TGM Plugin Activation verwaltet)
+
 Frontend:
 - Prefect Lib (https://github.com/javos/Prefect-Lib)
 - UIKit 3 (https://getuikit.com)
 - Themify Icons (https://themify.me)
 - FontAwesome Icons (https://fontawesome.com)
 
-(Dependencies werden im Projekt via composer und npm verwaltet)
+(Frontend-Dependencies werden im Projekt mit npm verwaltet)
 
 # Installation
 
